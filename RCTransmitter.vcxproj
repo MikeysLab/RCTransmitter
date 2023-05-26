@@ -20,16 +20,14 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>
-    </PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>
-    </PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -77,10 +75,10 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\RCTransmitter;$(ProjectDir)..\..\..\..\..\Program Files (x86)\Arduino\hardware\arduino\avr\cores\arduino;$(ProjectDir)..\..\..\..\..\Program Files (x86)\Arduino\hardware\arduino\avr\variants\eightanaloginputs;$(ProjectDir)..\..\..\..\..\Program Files (x86)\Arduino\hardware\tools\avr\\lib\gcc\avr\7.3.0\include;$(ProjectDir)..\..\..\..\..\Program Files (x86)\Arduino\hardware\tools\avr\avr\include;$(ProjectDir)..\..\..\..\..\Program Files (x86)\Arduino\hardware\tools\avr\\lib\gcc\avr\7.3.0\include;$(ProjectDir)..\..\..\..\..\Program Files (x86)\Arduino\hardware\tools\avr\avr\include-fixed;$(ProjectDir)..\..\..\..\..\Program Files (x86)\Arduino\hardware\tools\avr\avr\include\avr;$(ProjectDir)..\..\..\..\..\Program Files (x86)\Arduino\hardware\tools\avr\lib\gcc\avr\4.9.2\include;$(ProjectDir)..\..\..\..\..\Program Files (x86)\Arduino\hardware\tools\avr\lib\gcc\avr\4.9.2\include;$(ProjectDir)..\..\..\..\..\Program Files (x86)\Arduino\hardware\tools\avr\lib\gcc\avr\4.9.3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\RCTransmitter;$(ProjectDir)..\..\..\..\..\Program Files (x86)\Arduino\hardware\arduino\avr\cores\arduino;$(ProjectDir)..\..\..\..\..\Program Files (x86)\Arduino\hardware\arduino\avr\variants\eightanaloginputs;$(ProjectDir)..\..\..\..\..\\Users\\The Trusted One\\source\\repos\\RCTransmitter;$(ProjectDir)..\..\..\..\..\\Program Files (x86)\\Arduino\\hardware\\arduino\\avr\\cores\\arduino;$(ProjectDir)..\..\..\..\..\\Program Files (x86)\\Arduino\\hardware\\arduino\\avr\\variants\\eightanaloginputs;$(ProjectDir)..\..\..\..\..\\program files\\microsoft visual studio\\2022\\community\\common7\\ide\\extensions\\0axxbbxm.vxj\\Micro Platforms\\default\\debuggers\\VM_DBG;$(ProjectDir)..\..\..\..\..\\Program Files (x86)\\Arduino\\hardware\\tools\\avr\\\\lib\\gcc\\avr\\7.3.0\\include;$(ProjectDir)..\..\..\..\..\\Program Files (x86)\\Arduino\\hardware\\tools\\avr\\avr\\include;$(ProjectDir)..\..\..\..\..\\Program Files (x86)\\Arduino\\hardware\\tools\\avr\\\\lib\\gcc\\avr\\7.3.0\\include;$(ProjectDir)..\..\..\..\..\\Program Files (x86)\\Arduino\\hardware\\tools\\avr\\avr\\include-fixed;$(ProjectDir)..\..\..\..\..\\Program Files (x86)\\Arduino\\hardware\\tools\\avr\\avr\\include\\avr;$(ProjectDir)..\..\..\..\..\\Program Files (x86)\\Arduino\\hardware\\tools\\avr\\lib\\gcc\\avr\\4.8.1\\include;$(ProjectDir)..\..\..\..\..\\Program Files (x86)\\Arduino\\hardware\\tools\\avr\\lib\\gcc\\avr\\4.9.2\\include;$(ProjectDir)..\..\..\..\..\\Program Files (x86)\\Arduino\\hardware\\tools\\avr\\lib\\gcc\\avr\\4.9.3\\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ProjectDir)__vm\.RCTransmitter.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <IgnoreStandardIncludePath>true</IgnoreStandardIncludePath>
-      <PreprocessorDefinitions>__AVR_atmega328p__;__AVR_ATmega328P__;__AVR_ATmega328p__;F_CPU=8000000L;ARDUINO=108016;ARDUINO_AVR_PRO;ARDUINO_ARCH_AVR;__cplusplus=201103L;_VMICRO_INTELLISENSE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_VMICRO_INTELLISENSE;__AVR_atmega328p__;__AVR_ATmega328P__;__AVR_ATmega328p__;_VMDEBUG=1;F_CPU=8000000L;ARDUINO=108016;ARDUINO_AVR_PRO;ARDUINO_ARCH_AVR;__cplusplus=201103L;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -93,6 +91,9 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\..\..\Program Files (x86)\Arduino\hardware\arduino\avr\cores\arduino;$(ProjectDir)..\..\..\..\..\Program Files (x86)\Arduino\hardware\arduino\avr\variants\eightanaloginputs;$(ProjectDir)..\..\..\..\..\\Program Files (x86)\\Arduino\\hardware\\tools\\avr\\\\lib\\gcc\\avr\\7.3.0\\include;$(ProjectDir)..\..\..\..\..\\Program Files (x86)\\Arduino\\hardware\\tools\\avr\\avr\\include;$(ProjectDir)..\..\..\..\..\\Program Files (x86)\\Arduino\\hardware\\tools\\avr\\\\lib\\gcc\\avr\\7.3.0\\include;$(ProjectDir)..\..\..\..\..\\Program Files (x86)\\Arduino\\hardware\\tools\\avr\\avr\\include-fixed;$(ProjectDir)..\..\..\..\..\\Program Files (x86)\\Arduino\\hardware\\tools\\avr\\avr\\include\\avr;$(ProjectDir)..\..\..\..\..\\Program Files (x86)\\Arduino\\hardware\\tools\\avr\\lib\\gcc\\avr\\4.8.1\\include;$(ProjectDir)..\..\..\..\..\\Program Files (x86)\\Arduino\\hardware\\tools\\avr\\lib\\gcc\\avr\\4.9.2\\include;$(ProjectDir)..\..\..\..\..\\Program Files (x86)\\Arduino\\hardware\\tools\\avr\\lib\\gcc\\avr\\4.9.3\\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ProjectDir)__vm\.RCTransmitter.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <PreprocessorDefinitions>_VMICRO_INTELLISENSE;__AVR_atmega328p__;__AVR_ATmega328P__;__AVR_ATmega328p__;F_CPU=8000000L;ARDUINO=108016;ARDUINO_AVR_PRO;ARDUINO_ARCH_AVR;__cplusplus=201103L;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -107,12 +108,40 @@
     <DebuggerFlavor>VisualMicroDebugger</DebuggerFlavor>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="RCTransmitter.ino">
+    <ClCompile Include="RCTransmitter.ino">
       <FileType>CppCode</FileType>
-    </None>
+      <DeploymentContent>true</DeploymentContent>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="channel.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="Controller.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="defines.h" />
+    <ClInclude Include="utils.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="__vm\.RCTransmitter.vsarduino.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="channel.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="Controller.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="utils.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
