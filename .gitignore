@@ -361,3 +361,7 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/Libraries/Adafruit_GFX_Library/1.11.5/Adafruit_GFX_Library/examples/mock_ili9341
+/Libraries/Adafruit_GFX_Library/1.11.5/Adafruit_GFX_Library
+/Libraries/Adafruit_SSD1306/2.5.7/Adafruit_SSD1306
+/Libraries/Wire/1.0/Wire

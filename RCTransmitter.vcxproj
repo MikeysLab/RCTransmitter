@@ -55,6 +55,9 @@
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
   <ImportGroup Label="Shared">
+    <Import Project="Libraries\Adafruit_SSD1306\2.5.7\Adafruit_SSD1306\Adafruit_SSD1306-2.5.7.vcxitems" Label="Shared" />
+    <Import Project="Libraries\Adafruit_GFX_Library\1.11.5\Adafruit_GFX_Library\Adafruit_GFX_Library-1.11.5.vcxitems" Label="Shared" />
+    <Import Project="Libraries\Wire\1.0\Wire\Wire-1.0.vcxitems" Label="Shared" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -91,7 +94,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\..\..\Program Files (x86)\Arduino\hardware\arduino\avr\cores\arduino;$(ProjectDir)..\..\..\..\..\Program Files (x86)\Arduino\hardware\arduino\avr\variants\eightanaloginputs;$(ProjectDir)..\..\..\..\..\\Program Files (x86)\\Arduino\\hardware\\tools\\avr\\\\lib\\gcc\\avr\\7.3.0\\include;$(ProjectDir)..\..\..\..\..\\Program Files (x86)\\Arduino\\hardware\\tools\\avr\\avr\\include;$(ProjectDir)..\..\..\..\..\\Program Files (x86)\\Arduino\\hardware\\tools\\avr\\\\lib\\gcc\\avr\\7.3.0\\include;$(ProjectDir)..\..\..\..\..\\Program Files (x86)\\Arduino\\hardware\\tools\\avr\\avr\\include-fixed;$(ProjectDir)..\..\..\..\..\\Program Files (x86)\\Arduino\\hardware\\tools\\avr\\avr\\include\\avr;$(ProjectDir)..\..\..\..\..\\Program Files (x86)\\Arduino\\hardware\\tools\\avr\\lib\\gcc\\avr\\4.8.1\\include;$(ProjectDir)..\..\..\..\..\\Program Files (x86)\\Arduino\\hardware\\tools\\avr\\lib\\gcc\\avr\\4.9.2\\include;$(ProjectDir)..\..\..\..\..\\Program Files (x86)\\Arduino\\hardware\\tools\\avr\\lib\\gcc\\avr\\4.9.3\\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\..\..\Program Files (x86)\Arduino\hardware\arduino\avr\cores\arduino;$(ProjectDir)..\..\..\..\..\Program Files (x86)\Arduino\hardware\arduino\avr\variants\eightanaloginputs;$(ProjectDir)Libraries\Adafruit_SSD1306\2.5.7\Adafruit_SSD1306;$(ProjectDir)Libraries\Adafruit_GFX_Library\1.11.5\Adafruit_GFX_Library;$(ProjectDir)Libraries\Wire\1.0\Wire\src;$(ProjectDir)Libraries\Wire\1.0\Wire\src\utility;$(ProjectDir)..\..\..\..\..\\Program Files (x86)\\Arduino\\hardware\\tools\\avr\\\\lib\\gcc\\avr\\7.3.0\\include;$(ProjectDir)..\..\..\..\..\\Program Files (x86)\\Arduino\\hardware\\tools\\avr\\avr\\include;$(ProjectDir)..\..\..\..\..\\Program Files (x86)\\Arduino\\hardware\\tools\\avr\\\\lib\\gcc\\avr\\7.3.0\\include;$(ProjectDir)..\..\..\..\..\\Program Files (x86)\\Arduino\\hardware\\tools\\avr\\avr\\include-fixed;$(ProjectDir)..\..\..\..\..\\Program Files (x86)\\Arduino\\hardware\\tools\\avr\\avr\\include\\avr;$(ProjectDir)..\..\..\..\..\\Program Files (x86)\\Arduino\\hardware\\tools\\avr\\lib\\gcc\\avr\\4.8.1\\include;$(ProjectDir)..\..\..\..\..\\Program Files (x86)\\Arduino\\hardware\\tools\\avr\\lib\\gcc\\avr\\4.9.2\\include;$(ProjectDir)..\..\..\..\..\\Program Files (x86)\\Arduino\\hardware\\tools\\avr\\lib\\gcc\\avr\\4.9.3\\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ProjectDir)__vm\.RCTransmitter.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <PreprocessorDefinitions>_VMICRO_INTELLISENSE;__AVR_atmega328p__;__AVR_ATmega328P__;__AVR_ATmega328p__;F_CPU=8000000L;ARDUINO=108016;ARDUINO_AVR_PRO;ARDUINO_ARCH_AVR;__cplusplus=201103L;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
@@ -108,6 +111,7 @@
     <DebuggerFlavor>VisualMicroDebugger</DebuggerFlavor>
   </PropertyGroup>
   <ItemGroup>
+    <ClCompile Include="OLED.cpp" />
     <ClCompile Include="RCTransmitter.ino">
       <FileType>CppCode</FileType>
       <DeploymentContent>true</DeploymentContent>
@@ -123,6 +127,7 @@
       </SubType>
     </ClInclude>
     <ClInclude Include="defines.h" />
+    <ClInclude Include="OLED.h" />
     <ClInclude Include="utils.h">
       <SubType>
       </SubType>

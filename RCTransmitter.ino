@@ -6,8 +6,10 @@
 #include "defines.h"
 #include "utils.h"
 #include "controller.h"
+#include "OLED.h"
 
 controller controls;
+oledScreen oled;
 
 long _lastControllerUpdate = millis();
 long _lastTransmit = millis();
@@ -28,6 +30,7 @@ void loop() {
 	if (_lastControllerUpdate + DELAY_CONTROLLER_UPDATE_MS < millis())
 	{
 		if (controls.update()) _lastControllerUpdate = millis();
+
 	}
 
 	if (_lastTransmit + DELAY_TX_MS < millis())
@@ -38,7 +41,11 @@ void loop() {
 
 	if (_lastOledUpdate + DELAY_OLED_UPDATE_MS < millis())
 	{
-		//update the display
+		for (int i = 0; i < TX_NUM_CHANNELS - 1; i++)
+		{
+			oled.setChannelValue(i, controls.getChannelValue(i));
+		}
+		oled.update();
 		_lastOledUpdate = millis();
 	}
 }

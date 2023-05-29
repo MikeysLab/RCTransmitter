@@ -30,6 +30,9 @@
     <ClInclude Include="Controller.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="OLED.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="channel.cpp">
@@ -42,5 +45,8 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="RCTransmitter.ino" />
+    <ClCompile Include="OLED.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

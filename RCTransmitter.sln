@@ -1,9 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.33423.256
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RCTransmitter", "RCTransmitter.vcxproj", "{C5F80730-F44F-4478-BDAE-6634EFC2CA88}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Adafruit_SSD1306-2.5.7", "Libraries\Adafruit_SSD1306\2.5.7\Adafruit_SSD1306\Adafruit_SSD1306-2.5.7.vcxitems", "{04F4E90A-C521-43C2-9B27-B58D7207D8CE}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Adafruit_GFX_Library-1.11.5", "Libraries\Adafruit_GFX_Library\1.11.5\Adafruit_GFX_Library\Adafruit_GFX_Library-1.11.5.vcxitems", "{2B1F4F8A-3DE3-4798-AB23-7A4F522C6C4F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Wire-1.0", "Libraries\Wire\1.0\Wire\Wire-1.0.vcxitems", "{1D598374-DFA2-4467-A858-94E505873B75}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,5 +27,13 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C0A06685-0CC4-46AC-B0A5-741912283C72}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Libraries\Adafruit_SSD1306\2.5.7\Adafruit_SSD1306\Adafruit_SSD1306-2.5.7.vcxitems*{04f4e90a-c521-43c2-9b27-b58d7207d8ce}*SharedItemsImports = 9
+		Libraries\Wire\1.0\Wire\Wire-1.0.vcxitems*{1d598374-dfa2-4467-a858-94e505873b75}*SharedItemsImports = 9
+		Libraries\Adafruit_GFX_Library\1.11.5\Adafruit_GFX_Library\Adafruit_GFX_Library-1.11.5.vcxitems*{2b1f4f8a-3de3-4798-ab23-7a4f522c6c4f}*SharedItemsImports = 9
+		Libraries\Adafruit_GFX_Library\1.11.5\Adafruit_GFX_Library\Adafruit_GFX_Library-1.11.5.vcxitems*{c5f80730-f44f-4478-bdae-6634efc2ca88}*SharedItemsImports = 4
+		Libraries\Adafruit_SSD1306\2.5.7\Adafruit_SSD1306\Adafruit_SSD1306-2.5.7.vcxitems*{c5f80730-f44f-4478-bdae-6634efc2ca88}*SharedItemsImports = 4
+		Libraries\Wire\1.0\Wire\Wire-1.0.vcxitems*{c5f80730-f44f-4478-bdae-6634efc2ca88}*SharedItemsImports = 4
 	EndGlobalSection
 EndGlobal

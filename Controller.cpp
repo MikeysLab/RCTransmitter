@@ -28,3 +28,8 @@ bool controller::update()
 	}
 	return true;
 }
+
+uint16_t controller::getChannelValue(uint8_t channel)
+{
+	return channels[channel].getTxValue();
+}

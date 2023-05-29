@@ -19,6 +19,7 @@ public:
 
 	bool setup();
 	bool update();
+	uint16_t getChannelValue(uint8_t channel);
 };
 
 #endif
