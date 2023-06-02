@@ -8,7 +8,7 @@
 
 // Main loop processing intervals
 
-#define DELAY_CONTROLLER_UPDATE_MS		100
+#define DELAY_CONTROLLER_UPDATE_MS		1000
 #define DELAY_OLED_UPDATE_MS			100
 #define DELAY_TX_MS						50
 #define DELAY_RX_MS						50
@@ -23,4 +23,11 @@
 #define RC_MIN_VAL						1000
 #define RC_MID_VAL						1500
 #define RC_MAX_VAL						2999
+
+// Pin Min Max Values
+#define A0_MIN_VAL						137
+#define A0_MAX_VAL						635
+
+#define A1_MIN_VAL						
+#define A1_MAX_VAL
 #endif

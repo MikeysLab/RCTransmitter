@@ -8,6 +8,11 @@ controller::controller()
 {
 }
 
+uint8_t controller::getChannelPin(uint8_t channel)
+{
+	return channels[channel].getPin();
+}
+
 bool controller::setup()
 {
 	return(channels[0].attach(PIN_A0, true) &&
@@ -31,5 +36,5 @@ bool controller::update()
 
 uint16_t controller::getChannelValue(uint8_t channel)
 {
-	return channels[channel].getTxValue();
+	return channels[channel].getRawValue();
 }

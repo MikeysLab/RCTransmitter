@@ -30,7 +30,7 @@ void loop() {
 	if (_lastControllerUpdate + DELAY_CONTROLLER_UPDATE_MS < millis())
 	{
 		if (controls.update()) _lastControllerUpdate = millis();
-
+		displayRawValues(controls);
 	}
 
 	if (_lastTransmit + DELAY_TX_MS < millis())
@@ -54,6 +54,7 @@ void loop() {
 void SetupSerial()
 {
 	Serial.begin(115200);
+	identify();
 }
 
 void SetupController()
@@ -69,6 +70,13 @@ void SetupNRF()
 void SetupOLED()
 {
 
+}
+
+void displayRawValues(controller control)
+{
+	char line[100] = "";
+	sprintf(line, "0:%d\t1:%d\t2:%d\t3:%d\t4:%d\t5:%d\t", control.getChannelValue(0), control.getChannelValue(1), control.getChannelValue(2), control.getChannelValue(3), control.getChannelValue(4), control.getChannelValue(5));
+	Serial.println(line);
 }
 
 void identify()

@@ -14,7 +14,7 @@
 
 class channel {
 private:
-	uint8_t _rawValue = 0;
+	uint16_t _rawValue = 0;
 
 	uint8_t _pinNum;
 
@@ -37,6 +37,10 @@ public:
 	uint16_t getMaxValue();
 
 	uint16_t getTxValue();
+
+	uint16_t getRawValue();
+
+	uint8_t getPin();
 
 	bool attach(uint8_t pin, bool analog);
 	bool update();

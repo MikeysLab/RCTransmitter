@@ -16,6 +16,7 @@ private:
 
 public:
 	controller();
+	uint8_t getChannelPin(uint8_t channel);
 
 	bool setup();
 	bool update();

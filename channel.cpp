@@ -43,14 +43,24 @@ uint16_t channel::getTxValue()
 	return _rawValue * _scaleValue + _minVal;
 }
 
+uint16_t channel::getRawValue()
+{
+	return _rawValue;
+}
+
+uint8_t channel::getPin()
+{
+	return _pinNum;
+}
+
 bool channel::attach(uint8_t pin, bool analog)
 {
 	pinMode(pin, INPUT);
 	_pinNum = pin;
 
-	_minVal = RC_MIN_VAL;
-	_maxVal = RC_MID_VAL;
-	_midVal = RC_MAX_VAL;
+	_minVal = 1000;
+	_maxVal = 2000;
+	_midVal = 1500;
 
 	_isAnalog = analog;
 
