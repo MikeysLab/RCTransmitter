@@ -23,6 +23,15 @@ channel::channel()
 {
 }
 
+bool channel::calibrate()
+{
+	if (_minRaw >= 0 && _maxRaw <= 1028)
+	{
+
+	}
+	return false;
+}
+
 uint16_t channel::getMinValue()
 {
 	return uint16_t();
@@ -69,8 +78,30 @@ bool channel::attach(uint8_t pin, bool analog)
 	return true;
 }
 
+bool channel::attach(uint8_t pin, bool analog, uint16_t min, uint16_t mid, uint16_t max)
+{
+	_minVal = min;
+	_midVal = mid;
+	_maxRaw = max;
+	return attach(pin, analog);
+}
+
 bool channel::update()
 {
-	_rawValue = _isAnalog ? analogRead(_pinNum) : digitalRead(_pinNum);
+	if (_isAnalog)
+	{
+		uint16_t newValue = analogRead(_pinNum);
+		if ((newValue < (_rawValue - _flutterValue)) || (newValue > (_rawValue + _flutterValue)))
+		{
+			if (newValue < _minRaw) _minRaw = newValue;
+			if (newValue > _maxRaw) _maxRaw = newValue;
+
+			_rawValue = newValue;
+			return true;
+		}
+		return false;
+	}
+
+	_rawValue = digitalRead(_pinNum);
 	return true;
 }

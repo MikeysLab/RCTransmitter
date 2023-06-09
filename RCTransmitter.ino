@@ -16,6 +16,12 @@ long _lastTransmit = millis();
 long _lastOledUpdate = millis();
 //long _lastRecieve = millis();
 
+bool _canTransmit = false;
+
+enum state {config, calibrate, run};
+state _state = state::config;
+
+
 // the setup function runs once when you press reset or power the board
 void setup() {
 	SetupSerial();
@@ -27,26 +33,37 @@ void setup() {
 
 // the loop function runs over and over again until power down or reset
 void loop() {
-	if (_lastControllerUpdate + DELAY_CONTROLLER_UPDATE_MS < millis())
+	switch (_state)
 	{
-		if (controls.update()) _lastControllerUpdate = millis();
-		displayRawValues(controls);
-	}
-
-	if (_lastTransmit + DELAY_TX_MS < millis())
-	{
-		//transmit the current values
-		_lastTransmit = millis();
-	}
-
-	if (_lastOledUpdate + DELAY_OLED_UPDATE_MS < millis())
-	{
-		for (int i = 0; i < TX_NUM_CHANNELS - 1; i++)
+	case config:
+		break;
+	case calibrate:
+		break;
+	case run:
+		if (_lastControllerUpdate + DELAY_CONTROLLER_UPDATE_MS < millis())
 		{
-			oled.setChannelValue(i, controls.getChannelValue(i));
+			if (controls.update()) _lastControllerUpdate = millis();
+			displayRawValues(controls);
 		}
-		oled.update();
-		_lastOledUpdate = millis();
+
+		if ((_lastTransmit + DELAY_TX_MS < millis()) && _canTransmit)
+		{
+			//transmit the current values
+			_lastTransmit = millis();
+		}
+
+		if (_lastOledUpdate + DELAY_OLED_UPDATE_MS < millis())
+		{
+			for (int i = 0; i < TX_NUM_CHANNELS - 1; i++)
+			{
+				oled.setChannelValue(i, controls.getChannelValue(i));
+			}
+			oled.update();
+			_lastOledUpdate = millis();
+		}
+		break;
+	default:
+		break;
 	}
 }
 
@@ -75,7 +92,7 @@ void SetupOLED()
 void displayRawValues(controller control)
 {
 	char line[100] = "";
-	sprintf(line, "0:%d\t1:%d\t2:%d\t3:%d\t4:%d\t5:%d\t", control.getChannelValue(0), control.getChannelValue(1), control.getChannelValue(2), control.getChannelValue(3), control.getChannelValue(4), control.getChannelValue(5));
+	sprintf(line, "0:%d\t1:%d\t2:%d\t3:%d\t4:%d\t5:%d\t6:%d\t7:%d\t", control.getChannelValue(0), control.getChannelValue(1), control.getChannelValue(2), control.getChannelValue(3), control.getChannelValue(4), control.getChannelValue(5), control.getChannelValue(6), control.getChannelValue(7));
 	Serial.println(line);
 }
 
